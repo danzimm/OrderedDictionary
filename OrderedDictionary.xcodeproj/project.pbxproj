@@ -37,8 +37,8 @@
 		01C42B1B1D19AA2100E4D633 /* Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		01C42B1D1D19AA4300E4D633 /* Operators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
 		01C42B1F1D19AA7300E4D633 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		01C42B231D19B3D400E4D633 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		01C42B271D1A491100E4D633 /* TODO.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = TODO.md; path = ../TODO.md; sourceTree = "<group>"; };
+		01C42B231D19B3D400E4D633 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		01C42B271D1A491100E4D633 /* TODO.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = TODO.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +63,8 @@
 		01C42AF41D19A86100E4D633 = {
 			isa = PBXGroup;
 			children = (
+				01C42B231D19B3D400E4D633 /* README.md */,
+				01C42B271D1A491100E4D633 /* TODO.md */,
 				01C42B001D19A86100E4D633 /* OrderedDictionary */,
 				01C42B0C1D19A86100E4D633 /* OrderedDictionaryTests */,
 				01C42AFF1D19A86100E4D633 /* Products */,
@@ -86,8 +88,6 @@
 				01C42B1D1D19AA4300E4D633 /* Operators.swift */,
 				01C42B1B1D19AA2100E4D633 /* Errors.swift */,
 				01C42B1F1D19AA7300E4D633 /* Extensions.swift */,
-				01C42B231D19B3D400E4D633 /* README.md */,
-				01C42B271D1A491100E4D633 /* TODO.md */,
 				01C42B031D19A86100E4D633 /* Info.plist */,
 			);
 			path = OrderedDictionary;
