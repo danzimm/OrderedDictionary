@@ -181,6 +181,23 @@ class OrderedDictionaryTestsTests: XCTestCase {
         }
     }
     
+    func testInitWithDictionaryLiteral() {
+        let pairs = [
+            ("hello", "world"),
+            ("how", "are"),
+            ("you", "doing")
+        ]
+        let orderedDict = [
+            "hello": "world",
+            "how": "are",
+            "you": "doing"
+        ] as OrderedDictionary
+        for (index, (key, value)) in orderedDict.enumerated() {
+            XCTAssert(pairs[index] == (key, value),
+                      "Initializing an OrderedDictionary from a dictionary literal should work.")
+        }
+    }
+    
     func testInitWithBadSequence() {
         let pairs = [
             ("hello", "world"),

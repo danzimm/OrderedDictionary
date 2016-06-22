@@ -8,7 +8,7 @@
 
 // A structure containing an array of (Key, Value) pairs with the performance benefit of being
 // able to look up a value by its corresponding key as well.
-public struct OrderedDictionary<Key: Hashable, Value>: MutableCollection, CustomStringConvertible {
+public struct OrderedDictionary<Key: Hashable, Value>: MutableCollection, CustomStringConvertible, DictionaryLiteralConvertible {
     // Private variables backing this structure.
     private(set) var dictionary: [Key: Value]
     private(set) var keys: Array<Key>
@@ -67,6 +67,19 @@ public struct OrderedDictionary<Key: Hashable, Value>: MutableCollection, Custom
             guard self.dictionary[key] == nil else {
                 throw OrderedDictionaryInitializationError.DuplicateKey
             }
+            self.dictionary[key] = value
+            self.keys.append(key)
+        }
+    }
+    
+    // Initialize the ODict with a dictionary literal. This should retain the order you specify in the actual
+    // dictionary literal.
+    // Complexity: O(`elements.count`).
+    public init(dictionaryLiteral elements: (Key, Value)...) {
+        self.dictionary = [:]
+        self.keys = []
+        
+        for (key, value) in elements {
             self.dictionary[key] = value
             self.keys.append(key)
         }
